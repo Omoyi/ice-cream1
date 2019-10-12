@@ -9,28 +9,29 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/pica2" />
+        android:src="@drawable/pic8" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="500dp"
-        android:fontFamily="@fonts/lora"
         android:layout_centerHorizontal="true"
-        android:text="I SCREAM FOR ICE CREAM!"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@fonts/lora"
+        android:text="I  SCREAM FOR ICE CREAM!"
         android:textColor="#004d40"
         android:textSize="26sp"
         app:fontFamily="@font/akronim" />
 
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="106dp"
-        android:layout_height="wrap_content"
+        android:layout_width="126dp"
+        android:layout_height="59dp"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="304dp"
-        android:layout_marginBottom="100dp"
-
+        android:layout_marginBottom="138dp"
+        android:background="@drawable/pica"
         android:text="explore" />
 
 
