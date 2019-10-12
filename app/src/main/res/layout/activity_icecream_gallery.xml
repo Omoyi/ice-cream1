@@ -18,7 +18,7 @@
         android:id="@+id/imageView2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginLeft="166dp"
+        android:layout_marginLeft="163dp"
         android:layout_marginTop="435dp"
         android:layout_toRightOf="@id/imageView1"
         android:background="@drawable/frame"
@@ -26,15 +26,25 @@
 
     <TextView
 
+        android:id="@+id/position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView1"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="180dp"
+        android:text="DELiciousneSS"
         android:layout_centerHorizontal="true"
-        android:text="ICE Cream"
         android:textColor="@color/colorChoco"
         android:textSize="60sp"
         app:fontFamily="@font/alex_brush" />
+
+    <EditText
+        android:layout_width="205dp"
+        android:layout_height="85dp"
+        android:layout_below="@id/position"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-33dp"
+        android:id="@+id/enterText"
+        android:hint="Enter a type"
+        />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -42,7 +52,7 @@
         android:layout_height="120dp"
         android:layout_below="@id/imageView2"
         android:layout_marginLeft="136dp"
-        android:layout_marginTop="-263dp"
+        android:layout_marginTop="-222dp"
         android:background="@drawable/frame"
         android:src="@drawable/pica4" />
 
@@ -51,7 +61,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_below="@id/imageView3"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="-22dp"
         android:background="@drawable/frame"
         android:src="@drawable/pic10" />
 
@@ -71,7 +81,7 @@
         android:layout_height="120dp"
         android:layout_below="@id/imageView5"
         android:layout_marginLeft="147dp"
-        android:layout_marginTop="425dp"
+        android:layout_marginTop="394dp"
         android:background="@drawable/frame"
         android:src="@drawable/pic8" />
 
