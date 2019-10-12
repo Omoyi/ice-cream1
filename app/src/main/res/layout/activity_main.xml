@@ -30,4 +30,16 @@
         android:text="explore" />
 
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/pica4"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/pica3" />
+
 </RelativeLayout>
