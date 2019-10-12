@@ -14,7 +14,6 @@ public class icecreamGallery extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_icecream_gallery);
-
         String icecreams = myInput.getText().toString();
 
     }
