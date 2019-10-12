@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
@@ -13,11 +14,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="388dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="500dp"
         android:fontFamily="@fonts/lora"
+        android:layout_centerHorizontal="true"
         android:text="I SCREAM FOR ICE CREAM!"
-        android:textSize="26sp" />
+        android:textColor="#004d40"
+        android:textSize="26sp"
+        app:fontFamily="@font/akronim" />
 
     <Button
         android:id="@+id/homeButton"
@@ -25,21 +29,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="304dp"
-        android:layout_marginBottom="589dp"
+        android:layout_marginBottom="100dp"
 
         android:text="explore" />
 
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:src="@drawable/pica4"/>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:src="@drawable/pica3" />
-
 </RelativeLayout>
+
+<!--    android:layout_marginTop="388dp"
+ -->
