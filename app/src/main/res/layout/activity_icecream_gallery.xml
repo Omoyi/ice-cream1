@@ -2,10 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/colorFive">
+    android:background="#f9fbe7">
 
 
     <ImageView
+        android:layout_marginTop="20dp"
         android:id="@+id/imageView1"
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -13,6 +14,7 @@
         android:src="@drawable/pic6" />
 
     <ImageView
+
         android:id="@+id/imageView2"
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -27,11 +29,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView1"
+        android:layout_marginTop="27dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp"
         android:text="ICE Cream"
         android:textColor="@color/colorChoco"
-        android:textSize="57sp"
+        android:textSize="60sp"
         app:fontFamily="@font/alex_brush" />
 
     <ImageView
@@ -55,6 +57,7 @@
 
     <ImageView
         android:id="@+id/imageView5"
+        android:layout_marginTop="20dp"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginLeft="173dp"
