@@ -20,7 +20,7 @@
         android:fontFamily="@fonts/lora"
         android:text="I  SCREAM FOR ICE CREAM!"
         android:textColor="#004d40"
-        android:textSize="26sp"
+        android:textSize="40sp"
         app:fontFamily="@font/akronim" />
 
     <Button
