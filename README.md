@@ -15,6 +15,9 @@ This is an icecream finder-like website. It's intention is to help Icecream love
 ## Technologies used
 
 * JAVA
+* Intent
+* Butterknife
+* Relative layout
 ## screenshots
 
 ![Home](src/main/resources/drawable/)
