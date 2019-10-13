@@ -11,6 +11,6 @@ public class iceCreamList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_icecreams);
+        setContentView(R.layout.list_icecream);
     }
 }
