@@ -20,7 +20,7 @@ public class icecreamAdapter extends ArrayAdapter {
     public Object getItem(int position) {
         String restaurant = collection[position];
         String cuisine = place[position];
-        return String.format("%s \nServes great: %s", restaurant, cuisine);
+        return String.format("%s \nFound at: %s", restaurant, cuisine);
     }
 
     @Override

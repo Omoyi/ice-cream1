@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -40,6 +43,12 @@ public class iceCreamList extends AppCompatActivity {
         icecreamAdapter listMaker = new icecreamAdapter(this, android.R.layout.simple_selectable_list_item, collection, place );
         list.setAdapter(listMaker);
 
-
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String collection = ((TextView)view).getText().toString();
+                Toast.makeText(iceCreamList.this, collection, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
