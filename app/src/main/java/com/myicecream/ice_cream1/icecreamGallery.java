@@ -8,22 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class icecreamGallery extends AppCompatActivity {
 
-    private EditText myInput;
-    private Button galButton;
-
+    @BindView(R.id.enterText) EditText myInput;
+    @BindView(R.id.galButton) Button galButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_icecream_gallery);
+        ButterKnife.bind(this);
 
-        galButton = (Button) findViewById(R.id.galButton);
         galButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String getInput = myInput.getText().toString();
                 Intent ices = new Intent(icecreamGallery.this, iceCreamList.class);
+                ices.putExtra("Rachel's Ice cream", getInput);
                 startActivity(ices);
             }
         });
