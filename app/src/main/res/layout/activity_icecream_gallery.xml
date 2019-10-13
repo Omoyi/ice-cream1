@@ -37,14 +37,25 @@
         app:fontFamily="@font/alex_brush" />
 
     <EditText
+        android:id="@+id/enterText"
         android:layout_width="205dp"
         android:layout_height="85dp"
         android:layout_below="@id/position"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-33dp"
-        android:id="@+id/enterText"
-        android:hint="Enter a type"
-        />
+        android:layout_marginTop="-27dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Enter a type" />
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/position"
+        android:layout_marginLeft="-110dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/galButton"
+        android:layout_marginRight="1000dp"
+        android:layout_toRightOf="@id/position"
+        android:background="#f9fbe7"
+        android:text="Go" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -86,12 +97,3 @@
         android:src="@drawable/pic8" />
 
 </RelativeLayout>
-
-<!--We hadn't learnt how to make a gallery in the content. I wanted one and so I searched for it and found it on stackoverflow here is the link -> https://stackoverflow.com/questions/15794020/how-to-arrange-images-inside-relative-layout
--->
-<!--<ImageView-->
-<!--android:id="@+id/imageView3"-->
-<!--android:layout_toRightOf="@id/imageView1"-->
-<!--android:layout_width="240dp"-->
-<!--android:layout_height="240dp"-->
-<!--android:src="@drawable/pica3" />-->
