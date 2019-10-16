@@ -24,7 +24,7 @@
         android:layout_height="170dp"
         android:layout_below="@id/textView"
         android:layout_marginTop="-368dp"
-        android:src="@drawable/c" />
+        android:src="@mipmap/c" />
 
     <ListView
         android:id="@+id/iceList"
@@ -41,7 +41,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="-4dp"
         android:layout_toRightOf="@id/textView"
-        android:src="@drawable/b" />
+        android:src="@mipmap/b" />
 
     <ImageView
         android:id="@+id/image1"
@@ -50,7 +50,7 @@
 
         android:layout_marginRight="2dp"
         android:layout_toLeftOf="@id/textView"
-        android:src="@drawable/a" />
+        android:src="@mipmap/a" />
 
 
 </RelativeLayout>
