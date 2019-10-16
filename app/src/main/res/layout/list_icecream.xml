@@ -24,13 +24,13 @@
         android:layout_height="170dp"
         android:layout_below="@id/textView"
         android:layout_marginTop="-368dp"
-        android:src="@mipmap/c" />
+        />
 
     <ListView
         android:id="@+id/iceList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="90dp"
         android:cacheColorHint="@color/colorAccent"
         app:fontFamily="@font/butcherman" />
@@ -41,7 +41,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="-4dp"
         android:layout_toRightOf="@id/textView"
-        android:src="@mipmap/b" />
+         />
 
     <ImageView
         android:id="@+id/image1"
@@ -50,7 +50,7 @@
 
         android:layout_marginRight="2dp"
         android:layout_toLeftOf="@id/textView"
-        android:src="@mipmap/a" />
+         />
 
 
 </RelativeLayout>
