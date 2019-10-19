@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -28,16 +29,8 @@ public class iceCreamList extends AppCompatActivity {
     @BindView(R.id.errorTextView) TextView Error;
     @BindView(R.id.progressBar) ProgressBar Loading;
 
-    private String[] collection = new String[] {
-            "Vanilla Ice Cream.", "Cookies Ice Cream.", "Cream Ice Cream.", "Birthday Cake Ice Cream.", "Bubble Gum Ice Cream.", "Strawberry Ice Cream.",
-            "Black Cherry Ice Cream.", "Sundae Ice Cream", "Chocolate Peanut Butter Ice Cream.", "Cookie Dough"
-            , "Mint Chocolate Chip."
-    };
-    private String[] place = new String[] {
-            "Sweet Hereafter", "Cricket", "Red Square", "Kigali heights", "Slappy Cakes", "Chez lando",
-            "Fast food hub", "Horse Brass", "la Palis", "Bambino"
-            , "Digest ltd"
-    };
+    private static final String TAG = iceCreamList.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,9 +40,6 @@ public class iceCreamList extends AppCompatActivity {
         Intent ices = getIntent();
         String getInput = ices.getStringExtra("Rachel's Ice cream");
         title.setText(getInput);
-
-        icecreamAdapter listMaker = new icecreamAdapter(this, android.R.layout.simple_selectable_list_item, collection, place );
-        list.setAdapter(listMaker);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -65,13 +55,14 @@ public class iceCreamList extends AppCompatActivity {
         call.enqueue(new Callback<YelpBusinessesSearchResponse>() {
             @Override
             public void onResponse(Call<YelpBusinessesSearchResponse> call, Response<YelpBusinessesSearchResponse> response) {
+                hideProgressBar();
                 if (response.isSuccessful()) {
                     List<Business> icyList = response.body().getBusinesses();
-                    String[] collection = new String[icyList.size()];
+                    String[] icecreams = new String[icyList.size()];
                     String[] categories = new String[icyList.size()];
 
-                    for (int i = 0; i < collection.length; i++){
-                        collection[i] = icyList.get(i).getName();
+                    for (int i = 0; i < icecreams.length; i++){
+                        icecreams      [i] = icyList.get(i).getName();
                     }
 
                     for (int i = 0; i < categories.length; i++) {
@@ -79,15 +70,17 @@ public class iceCreamList extends AppCompatActivity {
                         categories[i] = category.getTitle();
                     }
 
-                    ArrayAdapter adapter = new icecreamAdapter(iceCreamList.this, android.R.layout.simple_list_item_1, collection, categories);
-                    list.setAdapter(adapter);
+//                    ArrayAdapter adapter = new icecreamAdapter(iceCreamList.this, android.R.layout.simple_list_item_1, collection, categories);
+//                    list.setAdapter(adapter);
 
                 }
             }
 
             @Override
             public void onFailure(Call<YelpBusinessesSearchResponse> call, Throwable t) {
-
+                Log.e(TAG, "onFailure: ",t );
+                hideProgressBar();
+                showFailureMessage();
             }
         });
 
