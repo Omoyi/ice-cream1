@@ -20,13 +20,8 @@ This is an icecream finder-like website. It's intention is to help Icecream love
 * Relative layout
 ## screenshots
 
-<<<<<<< HEAD
-![Home](src/main/resources/drawable/screenshot1)
-![gallery](src/main/resources/drawable/screenshot3a)
-=======
 ![Home](/res/drawable/screenshot1)
 ![gallery](/res/drawable/screenshot3a)
->>>>>>> 93b4a412305214a6ae6e72b77a50e3a7657c12ee
 
 ## License
 
