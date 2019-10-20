@@ -73,6 +73,9 @@ public class iceCreamList extends AppCompatActivity {
                     ArrayAdapter adapter = new icecreamAdapter(iceCreamList.this, android.R.layout.simple_list_item_1, icecreams, categories);
                     list.setAdapter(adapter);
 
+                    showIcecreams();
+                } else {
+                    showUnsuccessfulMessage();
                 }
             }
 
@@ -96,7 +99,7 @@ public class iceCreamList extends AppCompatActivity {
         Error.setVisibility(View.VISIBLE);
     }
 
-    private void showRestaurants() {
+    private void showIcecreams() {
         list.setVisibility(View.VISIBLE);
         title.setVisibility(View.VISIBLE);
     }
