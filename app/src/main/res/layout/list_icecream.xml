@@ -15,16 +15,9 @@
         android:textColor="#afb42b"
         android:layout_centerHorizontal="true"
         android:textSize="24sp"
+        android:visibility="gone"
         app:fontFamily="@font/butcherman" />
 
-
-    <ImageView
-        android:id="@+id/imageview"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_below="@id/textView"
-        android:layout_marginTop="-368dp"
-        />
 
     <ListView
         android:id="@+id/iceList"
@@ -33,7 +26,8 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="90dp"
         android:cacheColorHint="@color/colorAccent"
-        app:fontFamily="@font/butcherman" />
+        app:fontFamily="@font/butcherman"
+        android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/image"
@@ -41,16 +35,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="-4dp"
         android:layout_toRightOf="@id/textView"
-         />
-
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-
-        android:layout_marginRight="2dp"
-        android:layout_toLeftOf="@id/textView"
-         />
+        android:visibility="gone" />
 
     <ProgressBar
         android:id="@+id/progressBar"

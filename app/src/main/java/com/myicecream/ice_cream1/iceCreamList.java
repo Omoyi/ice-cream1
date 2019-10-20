@@ -62,7 +62,7 @@ public class iceCreamList extends AppCompatActivity {
                     String[] categories = new String[icyList.size()];
 
                     for (int i = 0; i < icecreams.length; i++){
-                        icecreams      [i] = icyList.get(i).getName();
+                        icecreams[i] = icyList.get(i).getName();
                     }
 
                     for (int i = 0; i < categories.length; i++) {
@@ -70,8 +70,8 @@ public class iceCreamList extends AppCompatActivity {
                         categories[i] = category.getTitle();
                     }
 
-//                    ArrayAdapter adapter = new icecreamAdapter(iceCreamList.this, android.R.layout.simple_list_item_1, collection, categories);
-//                    list.setAdapter(adapter);
+                    ArrayAdapter adapter = new icecreamAdapter(iceCreamList.this, android.R.layout.simple_list_item_1, icecreams, categories);
+                    list.setAdapter(adapter);
 
                 }
             }
