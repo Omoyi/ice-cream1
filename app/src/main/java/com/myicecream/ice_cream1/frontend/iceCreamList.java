@@ -1,8 +1,7 @@
-package com.myicecream.ice_cream1;
+package com.myicecream.ice_cream1.frontend;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +12,14 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.myicecream.ice_cream1.R;
+import com.myicecream.ice_cream1.backend.Business;
+import com.myicecream.ice_cream1.backend.Category;
+import com.myicecream.ice_cream1.backend.YelpBusinessesSearchResponse;
+import com.myicecream.ice_cream1.connection.YelpApi;
+import com.myicecream.ice_cream1.connection.YelpClient;
+import com.myicecream.ice_cream1.icecreamAdapter;
 
 import java.util.List;
 

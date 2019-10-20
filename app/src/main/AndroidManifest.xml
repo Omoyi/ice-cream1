@@ -10,20 +10,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".iceCreamList">
+        <activity android:name=".frontend.iceCreamList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.myicecream.ice_cream1.icecreamGallery">
+                android:value="com.myicecream.ice_cream1.frontend.icecreamGallery">
             </meta-data>
         </activity>
 
-        <activity android:name=".icecreamGallery">
+        <activity android:name=".frontend.icecreamGallery">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.myicecream.ice_cream1.MainActivity">
+                android:value="com.myicecream.ice_cream1.frontend.MainActivity">
             </meta-data>
         </activity>
-        <activity android:name=".MainActivity" android:theme="@style/NoActionBarTheme">
+        <activity android:name=".frontend.MainActivity" android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

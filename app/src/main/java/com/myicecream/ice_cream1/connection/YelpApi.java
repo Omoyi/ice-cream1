@@ -1,6 +1,6 @@
 package com.myicecream.ice_cream1.connection;
 
-import com.myicecream.ice_cream1.YelpBusinessesSearchResponse;
+import com.myicecream.ice_cream1.backend.YelpBusinessesSearchResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
