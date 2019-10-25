@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#b2dfdb">
+    android:background="#f0f4c3">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:id="@+id/below"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/bungee_shade"
-        android:text="Login"
-        android:textColor="#81c784"
+        android:text="Welcome"
+        android:textColor="#3e2723"
         android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="______________________"
+        android:text="__________________________"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/below"
         android:textColor="#fafafa"/>
@@ -26,10 +26,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="180dp"
         android:fontFamily="@font/creepster"
         android:text="Enter your email"
-        android:textColor="#fafafa"
+        android:textColor="#f57f17"
         android:textSize="20sp" />
 
     <EditText
@@ -37,8 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="380dp"
-        android:background="#a5d6a7"
+        android:layout_marginTop="240dp"
+        android:background="#dce775"
         android:ems="15"
         android:inputType="textEmailAddress"
         android:singleLine="true" />
@@ -47,20 +47,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="340dp"
         android:fontFamily="@font/creepster"
         android:text="Enter your password"
-        android:textColor="#fafafa"
+        android:textColor="#f57f17"
         android:textSize="20sp" />
 
     <EditText
         android:id="@+id/pswdId"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="400dp"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:background="#a5d6a7"
         android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="159dp"
+        android:background="@drawable/border_radius"
+        android:lineSpacingExtra="10sp"
+        android:text="Log in"
+        android:textColor="#C34E04"
+        android:textSize="10sp" />
 
 </RelativeLayout>

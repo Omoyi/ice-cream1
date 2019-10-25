@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".frontend.MysignupActivity"></activity>
-        <activity android:name=".frontend.MyLoginActivity" />
+        <activity android:name=".frontend.MainActivity"/>
         <activity android:name=".frontend.iceCreamList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -24,7 +24,7 @@
                 android:value="com.myicecream.ice_cream1.frontend.MainActivity" />
         </activity>
         <activity
-            android:name=".frontend.MainActivity"
+            android:name=".frontend.MyLoginActivity"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
