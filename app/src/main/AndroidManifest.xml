@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.myicecream.ice_cream1" >
+    package="com.myicecream.ice_cream1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/b"
         android:label="@string/gallery"
-
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".iceCreamList">
+        <activity android:name=".frontend.MysignupActivity"></activity>
+        <activity android:name=".frontend.MyLoginActivity" />
+        <activity android:name=".frontend.iceCreamList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.myicecream.ice_cream1.icecreamGallery">
-            </meta-data>
+                android:value="com.myicecream.ice_cream1.frontend.icecreamGallery" />
         </activity>
-
-        <activity android:name=".icecreamGallery">
+        <activity android:name=".frontend.icecreamGallery">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.myicecream.ice_cream1.MainActivity">
-            </meta-data>
+                android:value="com.myicecream.ice_cream1.frontend.MainActivity" />
         </activity>
-        <activity android:name=".MainActivity" android:theme="@style/NoActionBarTheme">
+        <activity
+            android:name=".frontend.MainActivity"
+            android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

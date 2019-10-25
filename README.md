@@ -18,11 +18,11 @@ This is an icecream finder-like website. It's intention is to help Icecream love
 * Intent
 * Butterknife
 * Relative layout
+
 ## screenshots
 
 ![Home](/res/drawable/screenshot1)
 ![gallery](/res/drawable/screenshot3a)
-
 
 ## License
 
