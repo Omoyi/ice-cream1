@@ -23,3 +23,10 @@ gradlew
 settings.gradle
 .idea
 .idea/
+/app/src/main/java/com/myicecream/ice_cream1/frontend/icecreamGallery.java
+/app/src/main/java/com/myicecream/ice_cream1/frontend/iceCreamList.java
+/app/src/main/java/com/myicecream/ice_cream1/frontend/MainActivity.java
+/app/src/main/java/com/myicecream/backend
+/app/src/main/java/com/myicecream/connection
+/app/src/main/java/com/myicecream/Constants
+/app/src/main/java/com/myicecream/icecreamAdapter
