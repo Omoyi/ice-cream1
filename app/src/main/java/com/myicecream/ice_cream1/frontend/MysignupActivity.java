@@ -1,21 +1,112 @@
-
 package com.myicecream.ice_cream1.frontend;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.myicecream.ice_cream1.R;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MysignupActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private FirebaseAuth Auth;
+    public static final String TAG = MysignupActivity.class.getSimpleName();
+    private FirebaseAuth.AuthStateListener AuthenticationListener;
+
+
+
+    @BindView(R.id.createUserButton) Button submitAccount;
+    @BindView(R.id.nameEditText) EditText NameEText;
+    @BindView(R.id.emailEditText) EditText EmailEText;
+    @BindView(R.id.passwordEditText) EditText PasswordEText;
+    @BindView(R.id.confirmPasswordEditText) EditText ConfPswEText;
+    @BindView(R.id.loginTextView) TextView goToLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysignup);
+        ButterKnife.bind(this);
+
+        Auth = FirebaseAuth.getInstance();
+        createAuthStateListener();
+        goToLogin.setOnClickListener(this);
+        submitAccount.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
-
+    public void onClick(View account) {
+        if (account == goToLogin) {
+            Intent login = new Intent(MysignupActivity.this, MyLoginActivity.class);
+            login.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(login);
+            finish();
+        }
+        if (account == submitAccount) {
+            createNewUser();
+        }
     }
+
+    private void createNewUser() {
+        final String name = NameEText.getText().toString().trim();
+        final String email = EmailEText.getText().toString().trim();
+        String password = PasswordEText.getText().toString().trim();
+        String confirmPassword = ConfPswEText.getText().toString().trim();
+
+        Auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        Log.d(TAG, "Authentication successful");
+                    }
+                    else {
+                        Toast.makeText(MysignupActivity.this, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show();
+                    }
+                }
+        });
+    }
+
+    private void createAuthStateListener() {
+        AuthenticationListener = new FirebaseAuth.AuthStateListener() {
+
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                final FirebaseUser owner = firebaseAuth.getCurrentUser();
+                if (owner != null) {
+                    Intent intent = new Intent(MysignupActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+
+        };
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        Auth.addAuthStateListener(AuthenticationListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (AuthenticationListener != null) {
+            Auth.removeAuthStateListener(AuthenticationListener);
+        }
+    }
+
 }
