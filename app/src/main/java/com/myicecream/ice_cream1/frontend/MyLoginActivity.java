@@ -1,9 +1,7 @@
 package com.myicecream.ice_cream1.frontend;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import com.myicecream.ice_cream1.R;
 
 public class MyLoginActivity extends AppCompatActivity {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
     android:background="#f0f4c3">
 
     <TextView
@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:id="@+id/below"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/bungee_shade"
         android:text="Welcome"
         android:textColor="#3e2723"
@@ -25,9 +25,9 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/creepster"
         android:text="Enter your email"
         android:textColor="#f57f17"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="180dp"
         android:background="#dce775"
         android:ems="15"
         android:inputType="textEmailAddress"
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="260dp"
         android:fontFamily="@font/creepster"
         android:text="Enter your password"
         android:textColor="#f57f17"
@@ -58,7 +58,7 @@
         android:id="@+id/pswdId"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_marginTop="430dp"
+        android:layout_marginTop="320dp"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:background="#a5d6a7"
@@ -68,13 +68,24 @@
         android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="590dp"
-        android:layout_marginEnd="151dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp"
         android:background="@drawable/border_radius"
         android:lineSpacingExtra="10sp"
         android:text="Log in"
         android:textColor="#C34E04"
         android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/goToSignUpId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:fontFamily="@font/acme"
+        android:text="Not yet subscribed ?  --> Create an account!"
+        android:textColor="#F44636" />
 
 </RelativeLayout>
