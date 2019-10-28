@@ -78,7 +78,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
         Auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-//                    ProgressDialog.dismiss();
+                    processDialog.dismiss();
 
                     if (task.isSuccessful()) {
                         Log.d(TAG, "Authentication successful");

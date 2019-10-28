@@ -44,4 +44,11 @@
         android:layout_margin="16dp"
         android:visibility="gone" />
 
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/iceList"
+        android:layout_marginTop="718dp"
+        android:text="Save Icecream Shop" />
+
 </RelativeLayout>
