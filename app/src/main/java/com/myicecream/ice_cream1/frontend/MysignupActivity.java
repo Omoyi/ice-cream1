@@ -78,7 +78,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
         Auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    ProgressDialog.dismiss();
+//                    ProgressDialog.dismiss();
 
                     if (task.isSuccessful()) {
                         Log.d(TAG, "Authentication successful");
@@ -90,6 +90,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
                     }
                 }
         });
+
     }
 
     private void createAuthStateListener() {
@@ -148,6 +149,8 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
             Auth.removeAuthStateListener(AuthenticationListener);
         }
     }
+
+
 
     private boolean isValidEmail(String email) {
         boolean isGoodEmail =
