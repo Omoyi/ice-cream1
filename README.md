@@ -23,9 +23,9 @@ in this version the main reason for it was so that we could authenticate users b
 
 ## screenshots
 
-![Screenshot of my Database] (scr1.png)
-![Screenshot of my Login form] (scr2.png)
-![Screenshot of my sign up] (scr3.png)
+![Screenshot of my Database](scr1.png)
+![Screenshot of my Login form](scr2.png)
+![Screenshot of my sign up](scr3.png)
 
 ## License
 
