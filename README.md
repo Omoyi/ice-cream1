@@ -1,6 +1,7 @@
 # ice-cream1
 
-This is an icecream finder-like website. It's intention is to help Icecream lovers find the most delicious and popular icecreams available and where to find them. 
+This is an icecream finder-like website. It's intention is to help Icecream lovers find the most delicious and popular icecreams available and where to find them.
+in this version the main reason for it was so that we could authenticate users by their email adress and password
 
 ## Prerequisites
 
