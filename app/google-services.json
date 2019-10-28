@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "388709267396",
+    "firebase_url": "https://ice-cream1-1f14e.firebaseio.com",
+    "project_id": "ice-cream1-1f14e",
+    "storage_bucket": "ice-cream1-1f14e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388709267396:android:42aebed1f1cdae5a279691",
+        "android_client_info": {
+          "package_name": "com.myicecream.ice_cream1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388709267396-oh3j9034m2sr3gn94mh565h08hrlhorj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myicecream.ice_cream1",
+            "certificate_hash": "fe8d31da82dc4ef276e3f882b6fb9c1d682e77f2"
+          }
+        },
+        {
+          "client_id": "388709267396-jt7qio9d4e17md959ku6503901m4ahrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDMintr8yu6CrI_Xd2tfYwAZJsOYYTxcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388709267396-jt7qio9d4e17md959ku6503901m4ahrv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

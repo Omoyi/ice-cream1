@@ -67,11 +67,13 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
     private void createNewUser() {
 
         USERSNAME = NameEText.getText().toString().trim();
+        final String name = NameEText.getText().toString().trim();
         final String email = EmailEText.getText().toString().trim();
         String password = PasswordEText.getText().toString().trim();
         String confirmPassword = ConfPswEText.getText().toString().trim();
+
         boolean validEmail = isValidEmail(email);
-        boolean validName = isValidName(USERSNAME);
+        boolean validName = isValidName(name);
         boolean validPassword = isValidPassword(password, confirmPassword);
         if (!validEmail || !validName || !validPassword) return;
         processDialog.show();
@@ -164,7 +166,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
 
     private boolean isValidName(String name) {
         if (name.equals("")) {
-            EmailEText.setError("Please enter your name");
+            NameEText.setError("Please enter your name");
             return false;
         }
         return true;
