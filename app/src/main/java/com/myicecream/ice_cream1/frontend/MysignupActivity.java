@@ -2,6 +2,8 @@ package com.myicecream.ice_cream1.frontend;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +26,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
     private FirebaseAuth Auth;
     public static final String TAG = MysignupActivity.class.getSimpleName();
     private FirebaseAuth.AuthStateListener AuthenticationListener;
+    private ProgressDialog processDialog;
 
 
 
@@ -39,7 +42,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysignup);
         ButterKnife.bind(this);
-
+        createAuthProgressDialog();
         Auth = FirebaseAuth.getInstance();
         createAuthStateListener();
         goToLogin.setOnClickListener(this);
@@ -68,7 +71,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
         boolean validName = isValidName(name);
         boolean validPassword = isValidPassword(password, confirmPassword);
         if (!validEmail || !validName || !validPassword) return;
-
+        processDialog.show();
         Auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -99,6 +102,14 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
 
         };
     }
+
+    private void createAuthProgressDialog() {
+        processDialog = new ProgressDialog(this);
+        processDialog.setTitle("coming soon...");
+        processDialog.setMessage("on Authentication with Firebase...");
+        processDialog.setCancelable(false);
+    }
+
     @Override
     public void onStart() {
         super.onStart();
