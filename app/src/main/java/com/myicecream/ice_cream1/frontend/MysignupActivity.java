@@ -64,6 +64,10 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
         final String email = EmailEText.getText().toString().trim();
         String password = PasswordEText.getText().toString().trim();
         String confirmPassword = ConfPswEText.getText().toString().trim();
+        boolean validEmail = isValidEmail(email);
+        boolean validName = isValidName(name);
+        boolean validPassword = isValidPassword(password, confirmPassword);
+        if (!validEmail || !validName || !validPassword) return;
 
         Auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
@@ -107,6 +111,35 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
         if (AuthenticationListener != null) {
             Auth.removeAuthStateListener(AuthenticationListener);
         }
+    }
+
+    private boolean isValidEmail(String email) {
+        boolean isGoodEmail =
+                (email != null && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches());
+        if (!isGoodEmail) {
+            EmailEText.setError("Please enter a valid email address");
+            return false;
+        }
+        return isGoodEmail;
+    }
+
+    private boolean isValidName(String name) {
+        if (name.equals("")) {
+            EmailEText.setError("Please enter your name");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidPassword(String password, String confirmPassword) {
+        if (password.length() < 6) {
+            PasswordEText.setError("Please create a password containing at least 6 characters");
+            return false;
+        } else if (!password.equals(confirmPassword)) {
+            PasswordEText.setError("Passwords do not match");
+            return false;
+        }
+        return true;
     }
 
 }
