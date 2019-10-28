@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.myicecream.ice_cream1.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,6 +28,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
     public static final String TAG = MysignupActivity.class.getSimpleName();
     private FirebaseAuth.AuthStateListener AuthenticationListener;
     private ProgressDialog processDialog;
+    private String USERSNAME;
 
 
 
@@ -63,20 +65,24 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void createNewUser() {
-        final String name = NameEText.getText().toString().trim();
+
+        USERSNAME = NameEText.getText().toString().trim();
         final String email = EmailEText.getText().toString().trim();
         String password = PasswordEText.getText().toString().trim();
         String confirmPassword = ConfPswEText.getText().toString().trim();
         boolean validEmail = isValidEmail(email);
-        boolean validName = isValidName(name);
+        boolean validName = isValidName(USERSNAME);
         boolean validPassword = isValidPassword(password, confirmPassword);
         if (!validEmail || !validName || !validPassword) return;
         processDialog.show();
         Auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
+                    ProgressDialog.dismiss();
+
                     if (task.isSuccessful()) {
                         Log.d(TAG, "Authentication successful");
+                        createFirebaseUserProfile(task.getResult().getUser());
                     }
                     else {
                         Toast.makeText(MysignupActivity.this, "Authentication failed.",
@@ -101,6 +107,25 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
             }
 
         };
+    }
+
+    private void createFirebaseUserProfile(final FirebaseUser user) {
+
+        UserProfileChangeRequest addProfileName = new UserProfileChangeRequest.Builder()
+                .setDisplayName(USERSNAME)
+                .build();
+
+        user.updateProfile(addProfileName)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Log.d(TAG, user.getDisplayName());
+                        }
+                    }
+
+                });
     }
 
     private void createAuthProgressDialog() {
