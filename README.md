@@ -16,6 +16,7 @@ in this version the main reason for it was so that we could authenticate users b
 ## Technologies used
 
 * JAVA
+* Firebase (No sql Database)
 * Intent
 * Butterknife
 * Relative layout
