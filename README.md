@@ -23,9 +23,9 @@ in this version the main reason for it was so that we could authenticate users b
 
 ## screenshots
 
-![ScreenShot](scr1.png)
-![ScreenShot](scr2.png)
-![ScreenShot](scr3.png)
+![ScreenShot](/res/drawable/scr1.png)
+![ScreenShot](/res/drawable/scr2.png)
+![ScreenShot](/res/drawable/scr3.png)
 
 ## License
 
