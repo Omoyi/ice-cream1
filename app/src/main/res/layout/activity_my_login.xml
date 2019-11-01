@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:background="@drawable/login1">
+    android:background="@drawable/ice">
 
     <TextView
+        android:id="@+id/below"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:id="@+id/below"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/bungee_shade"
+        android:fontFamily="@font/asset"
         android:text="Welcome"
         android:textColor="#3e2723"
         android:textSize="26sp" />
@@ -21,7 +21,7 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/below"
-        android:textColor="#fafafa"/>
+        android:textColor="#f57f17"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,8 +36,8 @@
     <EditText
         android:id="@+id/emailId"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        android:background="#dce775"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/screen"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ems="13"
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="240dp"
         android:fontFamily="@font/creepster"
         android:text="Enter your password"
         android:textColor="#f57f17"
@@ -58,10 +58,10 @@
         android:id="@+id/pswdId"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="270dp"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:background="#a5d6a7"
+        android:background="@drawable/screen"
         android:inputType="textPassword" />
 
     <Button
@@ -84,7 +84,7 @@
         android:layout_below="@id/homeButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
-        android:fontFamily="@font/acme"
+        android:fontFamily="@font/aguafina_script"
         android:text="Not yet subscribed ?  --> Create an account!"
         android:textColor="#F44636" />
 

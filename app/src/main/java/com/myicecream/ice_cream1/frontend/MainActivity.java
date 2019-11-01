@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    getSupportActionBar().setTitle("Glad to have you, " + user.getDisplayName() + "!!");
+                    getSupportActionBar().setTitle("Lovely " + user.getDisplayName());
                 } else {
 
                 }

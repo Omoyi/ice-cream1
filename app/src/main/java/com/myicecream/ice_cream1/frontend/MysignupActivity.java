@@ -73,7 +73,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
         String confirmPassword = ConfPswEText.getText().toString().trim();
 
         boolean validEmail = isValidEmail(email);
-        boolean validName = isValidName(name);
+        boolean validName = isValidName(USERSNAME);
         boolean validPassword = isValidPassword(password, confirmPassword);
         if (!validEmail || !validName || !validPassword) return;
         processDialog.show();

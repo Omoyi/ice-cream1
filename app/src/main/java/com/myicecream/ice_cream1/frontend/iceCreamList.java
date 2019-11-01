@@ -56,6 +56,7 @@ public class iceCreamList extends AppCompatActivity {
             }
         });
 
+
         YelpApi client = YelpClient.getClient();
 
         Call<YelpBusinessesSearchResponse> call = client.getIcecreams(getInput, "icecreams");

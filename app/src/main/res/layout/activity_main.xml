@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:contentDescription="TODO"
         android:scaleType="centerCrop"
-        android:src="@drawable/aa" />
+        android:src="@drawable/pica1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,18 +19,18 @@
         android:layout_marginTop="27dp"
         android:fontFamily="@font/alex_brush"
         android:text="~ Vive les Creme glacer ~"
-        android:textColor="#06A045"
-        android:textSize="22sp" />
+        android:textColor="#05C956"
+        android:textSize="24sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:fontFamily="@font/bonbon"
         android:text="*0*_____________o00o*|oOo|*o00o____________*0*"
-        android:layout_centerHorizontal="true"
-        android:textColor="#daa520"
-        android:textStyle="bold"/>
+        android:textColor="#D88B02"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_marginTop="190dp"
         android:fontFamily="@fonts/lora"
         android:text="I  SCREAM FOR ICE CREAM"
-        android:textColor="#D91350"
+        android:textColor="#35B0CE"
         android:textSize="30sp"
         app:fontFamily="@font/butcherman" />
 
@@ -55,7 +55,7 @@
 
         android:lineSpacingExtra="10sp"
         android:text="explore"
-        android:textColor="#C34E04"
+        android:textColor="#C20D0D"
         android:textSize="10sp" />
 
 </RelativeLayout>
