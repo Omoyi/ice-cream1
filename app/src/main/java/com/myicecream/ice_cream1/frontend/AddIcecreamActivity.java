@@ -35,7 +35,7 @@ public class AddIcecreamActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         if (v == wishList) {
-            Intent wish = new Intent(AddIcecreamActivity.this, MyLoginActivity.class);
+            Intent wish = new Intent(AddIcecreamActivity.this, WishActivity.class);
             startActivity(wish);
         }
 

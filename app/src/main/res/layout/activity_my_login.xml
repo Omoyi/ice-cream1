@@ -30,7 +30,7 @@
         android:layout_marginTop="120dp"
         android:fontFamily="@font/creepster"
         android:text="Enter your email"
-        android:textColor="#f57f17"
+        android:textColor="#B90F1A"
         android:textSize="20sp" />
 
     <EditText
@@ -51,7 +51,7 @@
         android:layout_marginTop="240dp"
         android:fontFamily="@font/creepster"
         android:text="Enter your password"
-        android:textColor="#f57f17"
+        android:textColor="#B90F1A"
         android:textSize="20sp" />
 
     <EditText
