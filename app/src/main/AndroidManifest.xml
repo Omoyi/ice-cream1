@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/b"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".frontend.MysignupActivity"></activity>
-        <activity android:name=".frontend.MainActivity"/>
+        <activity android:name=".frontend.AddIcecreamActivity"></activity>
+        <activity android:name=".frontend.MysignupActivity" />
+        <activity android:name=".frontend.MainActivity" />
         <activity android:name=".frontend.iceCreamList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -23,11 +24,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.myicecream.ice_cream1.frontend.MainActivity" />
         </activity>
-        <activity
-            android:name=".frontend.MyLoginActivity">
+        <activity android:name=".frontend.MyLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
