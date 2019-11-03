@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/b"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".frontend.AddIcecreamActivity"></activity>
+        <activity android:name=".frontend.WishActivity"></activity>
+        <activity android:name=".frontend.AddIcecreamActivity" />
         <activity android:name=".frontend.MysignupActivity" />
         <activity android:name=".frontend.MainActivity" />
         <activity android:name=".frontend.iceCreamList">
