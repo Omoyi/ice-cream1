@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.myicecream.ice_cream1.R;
+
 public class AddIcecreamActivity extends AppCompatActivity {
 
     @Override
