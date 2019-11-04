@@ -40,7 +40,7 @@ public class AddIcecreamActivity extends AppCompatActivity implements View.OnCli
         }
 
         if (v == favorite) {
-            Intent favorite = new Intent(AddIcecreamActivity.this, MyLoginActivity.class);
+            Intent favorite = new Intent(AddIcecreamActivity.this, WishActivity.class);
             startActivity(favorite);
         }
 
