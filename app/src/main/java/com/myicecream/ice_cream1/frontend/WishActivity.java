@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,7 +24,9 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.editText) EditText editText;
     @BindView(R.id.spinner) Spinner spinner;
     @BindView(R.id.button) Button button;
+    @BindView(R.id.iceListview) ListView icelistView;
     DatabaseReference wishList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

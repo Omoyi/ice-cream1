@@ -52,6 +52,14 @@
             android:background="#fafafa"
             android:entries="@array/types"
             android:padding="10dp" />
+
+        <ListView
+            android:id="@+id/iceListview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="160dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
 </RelativeLayout>

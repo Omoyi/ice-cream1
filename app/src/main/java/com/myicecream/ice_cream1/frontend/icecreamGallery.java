@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.myicecream.ice_cream1.R;
 
@@ -32,6 +35,12 @@ public class icecreamGallery extends AppCompatActivity {
                 startActivity(ices);
             }
         });
+    }
 
+    public void move(View view){
+        ImageView image = (ImageView)findViewById(R.id.imageView3);
+        Animation animation1 =
+                AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move);
+        image.startAnimation(animation1);
     }
 }
