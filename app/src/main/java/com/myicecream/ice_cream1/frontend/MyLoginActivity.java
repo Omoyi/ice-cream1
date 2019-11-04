@@ -52,7 +52,7 @@ public class MyLoginActivity extends AppCompatActivity implements View.OnClickLi
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    Intent intent = new Intent(MyLoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MyLoginActivity.this, AddIcecreamActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();

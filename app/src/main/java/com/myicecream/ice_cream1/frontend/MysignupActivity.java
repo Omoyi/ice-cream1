@@ -102,7 +102,7 @@ public class MysignupActivity extends AppCompatActivity implements View.OnClickL
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser owner = firebaseAuth.getCurrentUser();
                 if (owner != null) {
-                    Intent intent = new Intent(MysignupActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MysignupActivity.this, AddIcecreamActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
