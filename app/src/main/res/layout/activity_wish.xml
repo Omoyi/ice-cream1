@@ -5,35 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".frontend.WishActivity"
-    android:gravity="center">
+    android:background="@drawable/wish"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background=""/>
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Start" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
+        android:layout_width="167dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="12dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="159dp"
-        android:layout_weight="1"
-        android:text="Save" />
+        android:fontFamily="@font/alegreya_sc"
+        android:text="MY WiSH LIST"
+        android:textSize="23sp" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_marginTop="73dp"
-        android:entries="@array/types" />
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="231dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHint="@color/colorFive"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="82dp"
+            android:layout_below="@id/editText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="159dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_save_black_24dp"
+
+            android:textColor="#fafafa" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="227dp"
+            android:layout_height="88dp"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="9dp"
+            android:background="#fafafa"
+            android:entries="@array/types"
+            android:padding="10dp" />
+    </RelativeLayout>
 
 </RelativeLayout>
