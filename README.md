@@ -23,9 +23,18 @@ in the latest version we included we could authenticate users by their email adr
 
 ## screenshots
 
-<img src="images/screenshot1.png">
-<img src="images/screenshot3a.png">
-<img src="images/screenshot4.png">
+# My App
+<img src="images/b.png">
+<img src="images/c.png">
+<img src="images/d.png">
+<img src="images/e.png">
+<img src="images/f.png">
+<img src="images/i.png">
+
+
+# The Database
+
+<img src="images/a.png">
 
 ## License
 
