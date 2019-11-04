@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(gallery);
             }
 
-        });
+        });rrgtytryt
     }
 
     @Override
