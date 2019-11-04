@@ -19,30 +19,24 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="231dp"
-            android:layout_height="80dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
+            android:layout_width="186dp"
+            android:layout_height="64dp"
             android:background="@android:color/white"
-            android:padding="10dp"
             android:textColor="@android:color/holo_orange_dark"
             android:textColorHint="@color/colorFive"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="82dp"
-            android:layout_below="@id/editText"
+            android:layout_width="71dp"
+            android:layout_height="68dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="159dp"
+            android:layout_marginTop="98dp"
             android:layout_weight="1"
             android:background="@drawable/ic_save_black_24dp"
 
@@ -50,10 +44,11 @@
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="227dp"
-            android:layout_height="88dp"
-            android:layout_below="@id/editText"
-            android:layout_marginTop="9dp"
+            android:layout_width="186dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="35dp"
+
+            android:layout_toRightOf="@id/editText"
             android:background="#fafafa"
             android:entries="@array/types"
             android:padding="10dp" />
