@@ -23,9 +23,9 @@ in the latest version we included we could authenticate users by their email adr
 
 ## screenshots
 
-<img src="screenshot1.png">
-<img src="screenshot3a.png">
-<img src="screenshot4.png">
+<img src="images/screenshot1.png">
+<img src="images/screenshot3a.png">
+<img src="images/screenshot4.png">
 
 ## License
 
