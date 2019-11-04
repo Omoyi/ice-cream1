@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ice-cream1</string>
     <string name="gallery">Lovely ice creams</string>
+    <array name="types">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </array>
 </resources>

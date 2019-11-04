@@ -31,11 +31,15 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_wish);
         wishList = FirebaseDatabase.getInstance().getReference("icecreams");
         ButterKnife.bind(this);
+
+        button.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        addWishedIcecream();
+        if (v == button) {
+            addWishedIcecream();
+        }
     }
 
     // Add data to the database
@@ -47,8 +51,9 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
         if (!TextUtils.isEmpty(Iwish)){
             String id = wishList.push().getKey();
 
-            WishedIcecream wish = new WishedIcecream();
+            WishedIcecream wish = new WishedIcecream(id, Iwish, type);
             wishList.child(id).setValue(wish);
+            Toast.makeText(this, "Saved ", Toast.LENGTH_LONG).show();
 
         }
 
