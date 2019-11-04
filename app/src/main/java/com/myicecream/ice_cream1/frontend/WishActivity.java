@@ -1,20 +1,29 @@
 package com.myicecream.ice_cream1.frontend;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.myicecream.ice_cream1.R;
 import com.myicecream.ice_cream1.WishedIcecream;
+import com.myicecream.ice_cream1.wishedList;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,7 +35,7 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.button) Button button;
     @BindView(R.id.iceListview) ListView icelistView;
     DatabaseReference wishList;
-
+    List<WishedIcecream> it;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +43,7 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_wish);
         wishList = FirebaseDatabase.getInstance().getReference("icecreams");
         ButterKnife.bind(this);
-
+        it = new ArrayList<>();
         button.setOnClickListener(this);
     }
 
@@ -45,6 +54,27 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        wishList.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot snap: dataSnapshot.getChildren()){
+                    WishedIcecream wish = snap.getValue(WishedIcecream.class);
+                    it.add(wish);
+                }
+
+                wishedList adapter = new wishedList(WishActivity.this, it);
+                icelistView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
     // Add data to the database
 
     private void addWishedIcecream() {
