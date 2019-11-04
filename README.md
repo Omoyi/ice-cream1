@@ -23,9 +23,9 @@ in the latest version we included we could authenticate users by their email adr
 
 ## screenshots
 
-![ScreenShot](app/src/res/drawable/scr1.png)
-![ScreenShot](app/src/res/drawable/scr2.png)
-![ScreenShot](app/src/res/drawable/scr3.png)
+<img src="screenshot1.png">
+<img src="screenshot3a.png">
+<img src="screenshot4.png">
 
 ## License
 
