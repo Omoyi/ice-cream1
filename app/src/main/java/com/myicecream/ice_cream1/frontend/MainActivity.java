@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         Auth.addAuthStateListener(AuthListener);
     }
-
+kl;'uo'
     @Override
     public void onStop() {
         super.onStop();
